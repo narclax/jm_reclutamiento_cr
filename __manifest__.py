@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Part of Probuse Consulting Service Pvt Ltd. See LICENSE file for full copyright and licensing details.
 
 {
     'name' : 'Reclutamiento Portal Web Extension',
@@ -13,14 +10,13 @@
     'website' : 'www.martydev.com',
     'depends' : [
         'base',
-        'purchase',
+        'hr_recruitment',
     ],
     'support': 'jose.m.marty@gmail.com',
     'data' : [
         #'views/res_partner.xml',
-        #'views/po_config.xml',
     ],
     'installable' : True,
-    'application' : False,
+    'application' : True,
 }
 
