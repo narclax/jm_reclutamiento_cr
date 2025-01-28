@@ -190,12 +190,14 @@
             </page>
         </xpath>
 
-        <xpath expr="//field[@name='categ_ids']" position="after">
-                <label for="blood_type" string="Para Tipo de Sangre"/>
-                <field name="blood_type"/>
-                <field name="facebook_profile" widget="url"/>
-                <field name="instagram_profile" widget="url"/>
-            
+        <xpath expr="//group[field[@name='job_id']]" position="before">
+                <group string="Datos Geográficos">
+                    <field name="birthplace"/>
+                    <field name="birth_date"/>
+                    <field name="nationality"/>
+                    <field name="address"/>
+                    <field name="Ciudad"/>
+                </group>
         </xpath>
 
     </field>
