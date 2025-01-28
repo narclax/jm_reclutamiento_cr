@@ -17,7 +17,7 @@ class ResPartner(models.Model):
     civil_state = fields.Selection([
         ('soltero', 'Soltero'),
         ('casado', 'Casado'),
-    ], string='Sexo', default='soltero')
+    ], string='Estado Civil', default='soltero')
     
     facebook_profile = fields.Char(string='Perfil de Facebook')
     
@@ -31,12 +31,14 @@ class ResPartner(models.Model):
 
     Ciudad = fields.Char(string="Ciudad")
 
+    blood_type = fields.Char(string='Tipo de Sangre')
+
     ''' Idioma 1 '''
 
     language_name = fields.Selection([
         ('ingles', 'Inglés'),
         ('frances', 'Francés'),
-    ], string='Idioma', default='ingles')
+    ], string='Idioma')
 
     language_read = fields.Selection([
         ('regular', 'Regular'),
@@ -58,7 +60,7 @@ class ResPartner(models.Model):
     language_name_2 = fields.Selection([
         ('ingles', 'Inglés'),
         ('frances', 'Francés'),
-    ], string='Idioma', default='ingles')
+    ], string='Idioma')
 
     language_read_2 = fields.Selection([
         ('regular', 'Regular'),
