@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_applicant_form_extension" model="ir.ui.view">
+    <field name="name">hr.applicant.form.extension</field>
+    <field name="model">hr.applicant</field>
+    <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form" />
+    <field name="arch" type="xml">
+        <!-- Add the gender field before email_from -->
+        <xpath expr="//field[@name='email_from']" position="before">
+            <field name="gender"/>
+        </xpath>
+
+        <!-- Add a new tab for Family Structure -->
+        <xpath expr="//notebook" position="inside">
+            <page string="Estructura Familiar">
+                <group string="Primer Familiar">
+                    <group col="3">
+                        <field name="family_name" />
+                    </group>
+                    <group col="3">
+                        <field name="family_relation" />
+                    </group>
+                    <group col="3">
+                        <field name="family_sex" />
+                    </group>
+                    <group col="3">
+                        <field name="family_age" />
+                    </group>
+                    <group col="3">
+                        <field name="family_address" />
+                    </group>
+                </group>
+                <group string="Segundo Familiar">
+                    <group col="3">
+                        <field name="family_name_2" />
+                    </group>
+                    <group col="3">
+                        <field name="family_relation_2" />
+                    </group>
+                    <group col="3">
+                        <field name="family_sex_2" />
+                    </group>
+                    <group col="3">
+                        <field name="family_age_2" />
+                    </group>
+                    <group col="3">
+                        <field name="family_address_2" />
+                    </group>
+                </group>
+                <group string="Tercer Familiar">
+                    <group col="3">
+                        <field name="family_name_3" />
+                    </group>
+                    <group col="3">
+                        <field name="family_relation_3" />
+                    </group>
+                    <group col="3">
+                        <field name="family_sex_3" />
+                    </group>
+                    <group col="3">
+                        <field name="family_age_3" />
+                    </group>
+                    <group col="3">
+                        <field name="family_address_3" />
+                    </group>
+                </group>
+            </page>
+        </xpath>
+
+
+        <!-- Add a new tab for Family Structure -->
+        <xpath expr="//notebook" position="inside">
+            <page string="Educación">
+                <group string="Educación Principal">
+                    <group col="3">
+                        <field name="type_id" readonly="True" options="{'no_open': True}"/>
+                    </group>
+                    <group col="3">
+                        <field name="gained_title" />
+                    </group>
+                    <group col="3">
+                        <field name="from_year" />
+                    </group>
+                    <group col="3">
+                        <field name="to_year" />
+                    </group>
+                    
+                    <group col="3">
+                        <field name="institution" />
+                    </group>
+                </group>
+
+                <group string="Estudio Adicional">
+                    <group col="3">
+                        <field name="title_name_1"/>
+                    </group>
+                    <group col="3">
+                        <field name="gained_title_1" />
+                    </group>
+                    <group col="3">
+                        <field name="from_year_1" />
+                    </group>
+                    <group col="3">
+                        <field name="to_year_1" />
+                    </group>                    
+                    <group col="3">
+                        <field name="institution_1" />
+                    </group>
+                </group>
+
+                <group string="Estudio Adicional 2">
+                    <group col="3">
+                        <field name="title_name_2"/>
+                    </group>
+                    <group col="3">
+                        <field name="gained_title_2" />
+                    </group>
+                    <group col="3">
+                        <field name="from_year_2" />
+                    </group>
+                    <group col="3">
+                        <field name="to_year_2" />
+                    </group>                    
+                    <group col="3">
+                        <field name="institution_2" />
+                    </group>
+                </group>
+
+                <group string="Estudio Adicional 3">
+                    <group col="3">
+                        <field name="title_name_3"/>
+                    </group>
+                    <group col="3">
+                        <field name="gained_title_3" />
+                    </group>
+                    <group col="3">
+                        <field name="from_year_3" />
+                    </group>
+                    <group col="3">
+                        <field name="to_year_3" />
+                    </group>                    
+                    <group col="3">
+                        <field name="institution_3" />
+                    </group>
+                </group>
+
+            </page>
+        </xpath>
+
+
+        <!-- Add a new tab for Family Structure -->
+        <xpath expr="//notebook" position="inside">
+            <page string="Idiomas">
+                <group string="Idioma">
+                    <group col="3">
+                        <field name="language_name" />
+                    </group>
+                    <group col="3">
+                        <field name="language_read" />
+                    </group>
+                    <group col="3">
+                        <field name="language_write" />
+                    </group>
+                    <group col="3">
+                        <field name="language_speak" />
+                    </group>
+                </group>                
+            </page>
+        </xpath>
+
+
+
+    </field>
+</record>
+
+
+
+
+
+
+
+    </data>
+</odoo>

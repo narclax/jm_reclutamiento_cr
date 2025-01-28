@@ -77,32 +77,32 @@ class ResPartner(models.Model):
 
     ''' Educacion Primaria '''
 
-    from_year = fields.Integer(string="Desde")
-    to_year = fields.Integer(string="Hasta")
+    from_year = fields.Char(string="Desde")
+    to_year = fields.Char(string="Hasta")
     gained_title = fields.Char(string="Titulo Obtenido")
     institution = fields.Char(string="Institución")
 
     ''' Educacion Adicional 1'''
 
     title_name_1 = fields.Char(string="Nivel Obtenido")
-    from_year_1 = fields.Integer(string="Desde")
-    to_year_1 = fields.Integer(string="Hasta")
+    from_year_1 = fields.Char(string="Desde")
+    to_year_1 = fields.Char(string="Hasta")
     gained_title_1 = fields.Char(string="Titulo Obtenido")
     institution_1 = fields.Char(string="Institución")
 
     ''' Educacion Adicional 2'''
 
     title_name_2 = fields.Char(string="Nivel Obtenido")
-    from_year_2 = fields.Integer(string="Desde")
-    to_year_2 = fields.Integer(string="Hasta")
+    from_year_2 = fields.Char(string="Desde")
+    to_year_2 = fields.Char(string="Hasta")
     gained_title_2 = fields.Char(string="Titulo Obtenido")
     institution_2 = fields.Char(string="Institución")
 
     ''' Educacion Adicional 3'''
 
     title_name_3 = fields.Char(string="Nivel Obtenido")
-    from_year_3 = fields.Integer(string="Desde")
-    to_year_3 = fields.Integer(string="Hasta")
+    from_year_3 = fields.Char(string="Desde")
+    to_year_3 = fields.Char(string="Hasta")
     gained_title_3 = fields.Char(string="Titulo Obtenido")
     institution_3 = fields.Char(string="Institución")
 

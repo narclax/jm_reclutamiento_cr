@@ -11,10 +11,11 @@
     'depends' : [
         'base',
         'hr_recruitment',
+        'website_hr_recruitment'
     ],
     'support': 'jose.m.marty@gmail.com',
     'data' : [
-        #'views/res_partner.xml',
+        'views/hr_applicant.xml',
     ],
     'installable' : True,
     'application' : True,
