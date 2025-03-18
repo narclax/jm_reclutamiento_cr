@@ -16,6 +16,8 @@
     'support': 'jose.m.marty@gmail.com',
     'data' : [
         'views/hr_applicant.xml',
+        'pages/website_apply.xml',
+        'data/config_data.xml',
     ],
     'installable' : True,
     'application' : True,

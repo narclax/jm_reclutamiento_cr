@@ -1,0 +1,1222 @@
+<odoo>
+    <data> 
+        <template id="custom_website_apply" inherit_id="website_hr_recruitment.apply">
+            <xpath expr="//form[@id='hr_recruitment_form']" position="replace">
+                <form id="hr_recruitment_form" action="/website/form/" method="post"
+                    enctype="multipart/form-data" class="o_mark_required row"
+                    data-mark="*" data-model_name="hr.applicant"
+                    data-success-mode="redirect" data-success-page="/job-thank-you"
+                    hide-change-model="true">
+                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                    <span class="s_website_form_label_content">Nombre y Apellido</span>
+                                    <span class="s_website_form_mark"> *</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input id="recruitment1" type="text"
+                                        class="form-control s_website_form_input"
+                                        name="partner_name" required=""
+                                        data-fill-with="name"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                    <span class="s_website_form_label_content">Cédula</span>
+                                    <span class="s_website_form_mark"> *</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input id="recruitmentc1" type="text"
+                                        class="form-control s_website_form_input"
+                                        name="cedula" required=""
+                                        data-fill-with="cedula"/>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                    <span class="s_website_form_label_content">Sexo</span>
+                                    <span class="s_website_form_mark"> *</span>
+                                </label>
+                                <div class="col-sm">
+                                    <select id="recruitmentc6" name="gender" class="form-control s_website_form_select">
+                                      <option value="masculino">Masculino</option>
+                                      <option value="femenino">Femenino</option>
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                    <span class="s_website_form_label_content">Estado Civil</span>
+                                    <span class="s_website_form_mark"> *</span>
+                                </label>
+                                <div class="col-sm">
+                                    <select id="recruitmentc6" name="civil_state" class="form-control s_website_form_select">
+                                      <option value="soltero">Soltero(a)</option>
+                                      <option value="casado">Casado(a)</option>
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment3">
+                                    <span class="s_website_form_label_content">Teléfono</span>
+                                    <span class="s_website_form_mark"> *</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input id="recruitment3" type="tel"
+                                        class="form-control s_website_form_input"
+                                        name="partner_phone" required=""
+                                        data-fill-with="phone"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment3">
+                                    <span class="s_website_form_label_content">Celular</span>
+                                    <span class="s_website_form_mark"> *</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input type="tel"
+                                        class="form-control s_website_form_input"
+                                        name="partner_mobile"/>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required"
+                            data-type="email" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment2">
+                                    <span class="s_website_form_label_content">Correo Electrónico</span>
+                                    <span class="s_website_form_mark"> *</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input id="recruitment2" type="email"
+                                        class="form-control s_website_form_input"
+                                        name="email_from" required=""
+                                        data-fill-with="email"/>
+                                    <div class="alert alert-warning mt-2" id="email-message" style="display:none;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                    <span class="s_website_form_label_content">Tipo de sangre</span>
+                                    <span class="s_website_form_mark"> *</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input id="recruitmentc2" type="text"
+                                        class="form-control s_website_form_input"
+                                        name="blood_type"
+                                        data-fill-with="blood_type"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-12 mb-0 py-2 s_website_form_field s_website_form_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment4">
+                                    <span class="s_website_form_label_content">Perfil de LinkedIn</span>
+                                </label>
+                                <div class="col-sm" style="position: relative">
+                                    <i class="fa fa-linkedin fa-2x m-1 o_linkedin_icon" style="max-height: 37px;color: white;filter: unset;background: #0a66c3;"></i>
+                                    <input id="recruitment4" type="text"
+                                        class="form-control s_website_form_input pl64"
+                                        placeholder="e.g. https://www.linkedin.com/in/fpodoo/"
+                                        style="padding-left: 40px"
+                                        name="linkedin_profile"
+                                        data-fill-with="linkedin_profile"/>
+                                    <div class="alert alert-warning mt-2" id="linkedin-message" style="display:none;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-0 py-2 s_website_form_field s_website_form_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment4">
+                                    <span class="s_website_form_label_content">Perfil de Facebook</span>
+                                </label>
+                                <div class="col-sm" style="position: relative">
+                                    <i class="fa fa-facebook fa-2x m-1 o_linkedin_icon" style="max-height: 38px;width: 37px;text-align: center;padding-top: 5px;color: white;filter: unset;background: #0a66c3;"></i>
+                                    <input type="text"
+                                        class="form-control s_website_form_input pl64"
+                                        placeholder="e.g. https://www.facebook.com/"
+                                        style="padding-left: 40px"
+                                        name="facebook_profile"/>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 mb-0 py-2 s_website_form_field s_website_form_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment4">
+                                    <span class="s_website_form_label_content">Perfil de Instagram</span>
+                                </label>
+                                <div class="col-sm" style="position: relative">
+                                    <i class="fa fa-instagram fa-2x m-1 o_linkedin_icon" style="max-height: 37px;background: #f20006;filter:unset;color:white;"></i>
+                                    <input type="text"
+                                        class="form-control s_website_form_input pl64"
+                                        placeholder="e.g. https://www.instagram.com/"
+                                        style="padding-left: 40px"
+                                        name="instagram_profile"/>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-12 mb-0 py-2 s_website_form_field s_website_form_custom"
+                            data-type="binary" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment6">
+                                    <span class="s_website_form_label_content">Cargar Currículum</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input id="recruitment6" type="file"
+                                        class="form-control s_website_form_input o_resume_input"
+                                        name="Resume"/>
+                                    <span class="text-muted small">Carga tu Curriculum o tu perfil de Linkedin</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                            
+                        <h3 style="margin-top:30px;">Datos Geográficos</h3>
+                        
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                    <span class="s_website_form_label_content">Lugar de Nacimiento</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input type="text"
+                                        class="form-control s_website_form_input"
+                                        name="birthplace"/>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                    <span class="s_website_form_label_content">Fecha de Nacimiento</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input type="date"
+                                        class="form-control s_website_form_input"
+                                        name="birth_date"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                    <span class="s_website_form_label_content">Ciudad</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input type="text"
+                                        class="form-control s_website_form_input"
+                                        name="Ciudad"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                            data-type="char" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                    <span class="s_website_form_label_content">Nacionalidad</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input type="text"
+                                        class="form-control s_website_form_input"
+                                        name="nationality"/>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 mb-0 py-2 s_website_form_field"
+                            data-type="text" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment5">
+                                    <span class="s_website_form_label_content">Dirección</span>
+                                </label>
+                                <div class="col-sm">
+                                    <textarea id="recruitment5"
+                                        class="form-control s_website_form_input"
+                                        placeholder="Escriba aquí……"
+                                        name="address" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="col-12 mb-0 py-2 s_website_form_field"
+                            data-type="text" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment5">
+                                    <span class="s_website_form_label_content">Introducción Corta</span>
+                                </label>
+                                <div class="col-sm">
+                                    <textarea id="recruitment5"
+                                        class="form-control s_website_form_input"
+                                        placeholder="Escriba aquí……"
+                                        name="description" rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 style="margin-top:30px;">Idiomas</h3>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Primario
+                                  </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Idioma</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select id="recruitmentc3" name="language_name" class="form-control s_website_form_select">
+                                                      <option></option>
+                                                      <option value="ingles">Inglés</option>
+                                                      <option value="frances">Francés</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Lee</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select id="recruitmentc4" name="language_read" class="form-control s_website_form_select">
+                                                      <option value="regular">Regular</option>
+                                                      <option value="bien">Bien</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Escribe</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select id="recruitmentc5" name="language_write" class="form-control s_website_form_select">
+                                                      <option value="regular">Regular</option>
+                                                      <option value="bien">Bien</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Habla</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select id="recruitmentc6" name="language_speak" class="form-control s_website_form_select">
+                                                      <option value="regular">Regular</option>
+                                                      <option value="bien">Bien</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Secundario
+                                  </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Idioma</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select id="recruitmentc3" name="language_name_2" class="form-control s_website_form_select">
+                                                      <option></option>
+                                                      <option value="ingles">Inglés</option>
+                                                      <option value="frances">Francés</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Lee</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select id="recruitmentc4" name="language_read_2" class="form-control s_website_form_select">
+                                                      <option value="regular">Regular</option>
+                                                      <option value="bien">Bien</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Escribe</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select id="recruitmentc5" name="language_write_2" class="form-control s_website_form_select">
+                                                      <option value="regular">Regular</option>
+                                                      <option value="bien">Bien</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Habla</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select id="recruitmentc6" name="language_speak_2" class="form-control s_website_form_select">
+                                                      <option value="regular">Regular</option>
+                                                      <option value="bien">Bien</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                        <h3 style="margin-top:30px;">Nivel Académico</h3>
+                        <div class="accordion" id="accordionExample2">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2One" aria-expanded="true" aria-controls="collapse2One">
+                                    Principal
+                                  </button>
+                                </h2>
+                                <div id="collapse2One" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
+                                  <div class="accordion-body">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Título Obtenido</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="gained_title"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Desde el Año:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="from_year"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Hasta el Año:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="to_year"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Institución:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="institution"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                  </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Two" aria-expanded="false" aria-controls="collapse2Two">
+                                    Adicional
+                                  </button>
+                                </h2>
+                                <div id="collapse2Two" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample2">
+                                  <div class="accordion-body">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Grado Alcanzado</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="title_name_1"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Título Obtenido</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="gained_title_1"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Desde el Año:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="from_year_1"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Hasta el Año:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="to_year_1"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Institución:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="institution_1"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTree">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Tree" aria-expanded="false" aria-controls="collapse2Tree">
+                                    Adicional 2
+                                  </button>
+                                </h2>
+                                <div id="collapse2Tree" class="accordion-collapse collapse" aria-labelledby="headingTree" data-bs-parent="#accordionExample2">
+                                  <div class="accordion-body">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Grado Alcanzado</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="title_name_2"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Título Obtenido</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="gained_title_2"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Desde el Año:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="from_year_2"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Hasta el Año:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="to_year_2"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Institución:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="institution_2"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Fourth" aria-expanded="false" aria-controls="collapse2Fourth">
+                                    Adicional 3
+                                  </button>
+                                </h2>
+                                <div id="collapse2Fourth" class="accordion-collapse collapse" aria-labelledby="headingFourth" data-bs-parent="#accordionExample2">
+                                  <div class="accordion-body">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Grado Alcanzado</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="title_name_3"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Título Obtenido</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="gained_title_3"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Desde el Año:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="from_year_3"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Hasta el Año:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="to_year_3"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Institución:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="institution_3"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+
+                        <h3 style="margin-top:30px;">Estructura Familiar</h3>
+                        <div class="accordion" id="accordionExample3">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3One" aria-expanded="true" aria-controls="collapse3One">
+                                    Principal
+                                  </button>
+                                </h2>
+                                <div id="collapse3One" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample3">
+                                  <div class="accordion-body">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Nombre:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="family_name"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Parentesco:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="family_relation"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Sexo</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select id="recruitmentc6" name="family_sex" class="form-control s_website_form_select">
+                                                      <option value="masculino">Masculino</option>
+                                                      <option value="femenino">Femenino</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Edad:</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="number"
+                                                    class="form-control s_website_form_input"
+                                                    name="family_age"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-12 mb-0 py-2 s_website_form_field"
+                                            data-type="text" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment5">
+                                                    <span class="s_website_form_label_content">Dirección</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <textarea id="recruitment5"
+                                                        class="form-control s_website_form_input"
+                                                        placeholder="Escriba aquí……"
+                                                        name="family_address" rows="2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Two" aria-expanded="false" aria-controls="collapse3Two">
+                                    Secundario
+                                  </button>
+                                </h2>
+                                <div id="collapse3Two" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample3">
+                                  <div class="accordion-body">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Nombre:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="family_name_2"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Parentesco:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="family_relation_2"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Sexo</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select name="family_sex_2" class="form-control s_website_form_select">
+                                                      <option value="masculino">Masculino</option>
+                                                      <option value="femenino">Femenino</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Edad:</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="number"
+                                                    class="form-control s_website_form_input"
+                                                    name="family_age_2"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-12 mb-0 py-2 s_website_form_field"
+                                            data-type="text" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment5">
+                                                    <span class="s_website_form_label_content">Dirección</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <textarea id="recruitment5"
+                                                        class="form-control s_website_form_input"
+                                                        placeholder="Escriba aquí……"
+                                                        name="family_address_2" rows="2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTree">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Tree" aria-expanded="false" aria-controls="collapse3Tree">
+                                    Tercero
+                                  </button>
+                                </h2>
+                                <div id="collapse3Tree" class="accordion-collapse collapse" aria-labelledby="headingTree" data-bs-parent="#accordionExample3">
+                                  <div class="accordion-body">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Nombre:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="family_name_3"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Parentesco:</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="text"
+                                                    class="form-control s_website_form_input"
+                                                    name="family_relation_3"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Sexo</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select name="family_sex_3" class="form-control s_website_form_select">
+                                                      <option value="masculino">Masculino</option>
+                                                      <option value="femenino">Femenino</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-6 mb-0 py-2 s_website_form_field s_website_form_required s_website_form_model_required"
+                                            data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                                                    <span class="s_website_form_label_content">Edad:</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="number"
+                                                    class="form-control s_website_form_input"
+                                                    name="family_age_3"/>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-12 mb-0 py-2 s_website_form_field"
+                                            data-type="text" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment5">
+                                                    <span class="s_website_form_label_content">Dirección</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <textarea id="recruitment5"
+                                                        class="form-control s_website_form_input"
+                                                        placeholder="Escriba aquí……"
+                                                        name="family_address_3" rows="2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="col-12 mb-0 py-2 s_website_form_field s_website_form_dnone">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment7">
+                                    <span class="s_website_form_label_content">Job</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input id="recruitment7" type="hidden"
+                                        class="form-control s_website_form_input"
+                                        name="job_id"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-0 py-2 s_website_form_field s_website_form_dnone">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="recruitment8">
+                                    <span class="s_website_form_label_content">Department</span>
+                                </label>
+                                <div class="col-sm">
+                                    <input id="recruitment8" type="hidden"
+                                        class="form-control s_website_form_input"
+                                        name="department_id"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 s_website_form_submit mb64" data-name="Submit Button" style="text-align: right;margin-top: 40px;">
+                            <div style="width: 200px" class="s_website_form_label"/>
+                            <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send" id="apply-btn">Aplicar</a>
+                            <span id="s_website_form_result"></span>
+                        </div>
+                    </div>
+                </form>
+            </xpath>
+        </template>
+        
+    </data>
+</odoo>
+
+
+
+
+
